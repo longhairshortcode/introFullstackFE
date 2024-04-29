@@ -1,0 +1,39 @@
+.componentContainer{
+    height: 100vh;
+    background-color: lightgray;
+    border: 10px solid navy;
+    padding: 0 30px;
+}
+
+
+/* 
+.updateFormContainer{
+    display: flex;
+    flex-direction: column;
+    border: 5px solid goldenrod ;
+    width: 100%;
+    max-width: fit-content;
+} */
+
+
+.title{
+    /* border: 2px solid navy; */
+    text-align: center;
+    margin-top: 50px;
+    color: darkorange;
+    font-size: 50px;
+}
+
+.allFormsContainer{
+    /* border: 2px solid purple; */
+}
+
+
+
+
+
+/* .updateButton{
+    background-color: rgb(244, 209, 70);
+    font-weight: bold;
+} */
+

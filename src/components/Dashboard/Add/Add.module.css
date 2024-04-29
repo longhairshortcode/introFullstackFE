@@ -1,0 +1,17 @@
+.addFormContainer{
+    display: flex;
+    flex-direction: column;
+    border: 5px solid green ;
+    width: 100%;
+    max-width: fit-content;
+}
+
+.name, .email{
+    width: 250px;
+}
+
+
+.addButton{
+    background-color: rgb(111, 218, 111);
+    font-weight: bold;
+}

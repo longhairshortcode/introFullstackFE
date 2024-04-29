@@ -1,0 +1,44 @@
+.componentContainer{
+    display: flex;
+    justify-content: center;
+    /* border: 6px solid  red; */
+    height: 100vh;
+}
+
+.titleAndFormContainer{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    border: 4px solid  blue;
+    max-width: 475px;
+    padding:  55px;
+    width: 100%;
+    height: 250px;
+    margin: auto;
+}
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* border: 2px solid red; */
+}
+
+.email, .password{
+    border: 2px solid orange;
+    padding: 2px;
+}
+
+.title{
+    /* border: 2px solid hotpink; */
+    color: orange;
+    font-weight: bold;
+    font-size: 23px;
+    margin-bottom: 20px; 
+}
+.button{
+    margin-top: 7px;
+    width: fit-content;
+    padding: 3px 12px;
+    font-size: 11.5px;
+}

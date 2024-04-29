@@ -1,0 +1,17 @@
+.updateFormContainer{
+    display: flex;
+    flex-direction: column;
+    border: 5px solid yellow ;
+    width: 100%;
+    max-width: fit-content;
+}
+
+.name, .email{
+    width: 250px;
+}
+
+
+.updateButton{
+    background-color: rgb(213, 236, 42);
+    font-weight: bold;
+}

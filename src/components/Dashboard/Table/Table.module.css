@@ -1,0 +1,82 @@
+.componentContainer{
+    margin-top: 30px;
+    /* border: 2px solid red; */
+    /* max-width: 1050px; */
+    /* width: 100%; */
+    width: 1000px;
+}
+
+.studentTableContainer{
+    /* border: 2px solid blue; */
+}
+
+.studentTable{
+    border: 2px solid rgb(231, 141, 31);
+    /* margin-top: 40px; */
+    display: flex;
+    /* width: 1000px; */
+    /* margin: 0 auto; */
+}
+
+.columnTitles{
+    /* border: 2px solid red; */
+    /* margin-top: 40px; */
+    display: flex;
+    width: 1000px;
+    background-color: orange;
+    /* margin: 0 auto; */
+    font-weight: bold;
+}
+
+.columnTitles > div {
+    padding: 17px 0;
+    font-size: 20px;
+}
+
+.studentTable > div {
+    padding: 4px 0;
+    font-size: 15px;
+}
+
+
+/* .studentID, .name, .email{
+    text-align: center;
+} */
+
+
+.idColumn, .nameColumn, .emailColumn{
+    border: 3px solid navy;
+    width: 33.33%;
+
+}
+
+.emailColumn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 4px green solid; */
+}
+
+.updateAndDeleteContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.updateButton {
+    border: 2px solid black;
+    font-weight: bold;
+    background-color: yellow;
+}
+
+.deleteButton, .updateButton {
+    border: 2px solid black;
+    font-weight: bold;
+    
+}
+
+.deleteButton{
+    border: 2px solid black;
+    font-weight: bold;
+    background-color: rgb(234, 129, 129);
+}
