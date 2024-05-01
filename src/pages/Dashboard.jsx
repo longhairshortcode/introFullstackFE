@@ -8,10 +8,9 @@ import {AuthContext} from "../App.jsx"
 
 function Dashboard() {
   const {user} = useContext(AuthContext)
+  
   const [userID, setUserID] = useState(user.id)
-
   const [students, setStudents] = useState([]);
-
   const [updatedStudent, setUpdatedStudent] = useState({
     _id: "",
     studentID: "",
