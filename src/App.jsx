@@ -18,13 +18,13 @@ function App() {
   })
 
   useEffect(()=>{
-    console.log(user)
+    // console.log("This is from the useEffect: ",  user.id)
   },[user])
 
 
   return (
     <>
-      <AuthContext.Provider value={{setUser}}>
+      <AuthContext.Provider value={{setUser, user}}>
         <Routes>
           <Route path={"/dashboard"} element={ user.id ? <Dashboard/> : <Navigate to="/login"/>}/>
           <Route path={"/"} element={<SignUp/>}/>

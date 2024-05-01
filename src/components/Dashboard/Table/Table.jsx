@@ -7,7 +7,7 @@ function Table({students, updateStudent, displayAllStudents}) {
 
   async function deleteStudent(id) {
         try{
-            const response = await axios.delete(`http://localhost:2121/student-register/delete-single-student/${id}`)
+            const response = await axios.delete(`http://localhost:2323/student-register/delete-single-student/${id}`)
             console.log(response)
             if (response.status === 200) {
               displayAllStudents();
@@ -33,7 +33,7 @@ function Table({students, updateStudent, displayAllStudents}) {
             <div className={style.emailColumn}>
                 <h3 className={style.tableTitles}>Student Email:</h3>
             </div>
-          </div>
+      </div>
       <div className={style.studentTableContainer}>
         { students.sort((a, b) => a.studentID - b.studentID).map((student) => {
           return( 

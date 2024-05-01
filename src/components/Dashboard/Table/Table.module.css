@@ -1,22 +1,12 @@
 .componentContainer{
     margin-top: 30px;
-    /* border: 2px solid red; */
+    border: 2px solid red;
     /* max-width: 1050px; */
     /* width: 100%; */
     width: 1000px;
 }
 
-.studentTableContainer{
-    /* border: 2px solid blue; */
-}
 
-.studentTable{
-    border: 2px solid rgb(231, 141, 31);
-    /* margin-top: 40px; */
-    display: flex;
-    /* width: 1000px; */
-    /* margin: 0 auto; */
-}
 
 .columnTitles{
     /* border: 2px solid red; */
@@ -31,6 +21,10 @@
 .columnTitles > div {
     padding: 17px 0;
     font-size: 20px;
+}
+
+.studentTable{
+    display: flex;
 }
 
 .studentTable > div {

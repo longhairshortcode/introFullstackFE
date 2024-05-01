@@ -1,8 +1,19 @@
 import style from "./Add.module.css"
-import {useState} from "react" 
-import axios from "axios" 
+import {useState, useContext, useEffect} from "react" 
+import axios from "axios"
+import {AuthContext} from "../../../App.jsx"
 
 function Add({displayAllStudents}) {
+  const {user} = useContext(AuthContext)
+
+  const [userID, setUserID] = useState(user.id)
+
+  // useEffect(()=>{
+  //   setUserID(user.id)
+  //   console.log(userID)
+  //   console.log("This is user from Add: ", user)
+  // }, [user])
+
     const [studentData, setStudentData] = useState({
         studentID: "",
         name: "",
@@ -24,7 +35,8 @@ function Add({displayAllStudents}) {
         e.preventDefault()
             const {studentID, name, email} =  studentData
             try{
-                const response = await axios.post("http://localhost:2121/student-register/create-single-student", {studentID, name, email})
+                const response = await axios.post("http://localhost:2323/student-register/create-single-student", 
+                {studentID, name, email, userID})
                 console.log(response)
                 if (response.status === 200) {
                   displayAllStudents();

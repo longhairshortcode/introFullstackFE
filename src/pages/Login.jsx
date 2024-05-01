@@ -26,8 +26,8 @@ function Login() {
         e.preventDefault()
         const {email, password} = userLogin
         try{
-            const res = await axios.post("http://localhost:2121/user/login", {email, password});
-            console.log(res)
+            const res = await axios.post("http://localhost:2323/user/login", {email, password});
+            // console.log(res)
             if (res.status === 200){
                 setUser(prev => ({
                     ...prev,
