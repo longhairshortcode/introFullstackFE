@@ -69,6 +69,9 @@ useEffect(()=>{
 
     return (
     <div className={style.componentContainer}>
+      <div className={style.logOutButtonContainer}>
+        <button className={style.logOutButton}>Log Out</button>
+      </div>
       <h1 className={style.title}>Student Record</h1>
       <div className={style.allFormsContainer}>
       <Add displayAllStudents={displayAllStudents}/>

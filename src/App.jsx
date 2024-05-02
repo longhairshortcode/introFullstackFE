@@ -10,16 +10,16 @@ export const AuthContext = createContext()
 
 
 function App() {
+  //For session storage
+const [userID, setUserID] = useState(window.sessionStorage.getItem("userID"))
+  //For local storage
+const [userId, setUserId] = useState(window.localStorage.getItem("userID"))
 
   const [user, setUser] = useState({
     name: "",
     email: "",
-    id: "",
+    id: userId,
   })
-
-  useEffect(()=>{
-    // console.log("This is from the useEffect: ",  user.id)
-  },[user])
 
 
   return (

@@ -70,6 +70,7 @@ function SignUp() {
                     id: res.data.id,
                 }))
                 window.sessionStorage.setItem("userID", res.data.id)
+                window.localStorage.setItem("userID", res.data.id)
                 navigate("/dashboard")
             }
         }catch(error){

@@ -36,8 +36,11 @@ function Login() {
                     id: res.data.id
                     
                 }))
-                window.sessionStorage.setItem("userID", res.data.id)
+                //Use for more sensitive apps or if you don't mind session ending at close of tab
+                // window.sessionStorage.setItem("userID", res.data.id)
                 
+                //use below for when you want them to be logged in forever until they click log out/timer is up
+                window.localStorage.setItem("userID", res.data.id)
                 navigate("/dashboard")
             }
             
