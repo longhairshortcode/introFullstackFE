@@ -69,6 +69,7 @@ function SignUp() {
                     email: res.data.email,
                     id: res.data.id,
                 }))
+                window.sessionStorage.setItem("userID", res.data.id)
                 navigate("/dashboard")
             }
         }catch(error){

@@ -18,7 +18,8 @@ function Add({displayAllStudents}) {
         studentID: "",
         name: "",
         email: "",
-    })
+    }) 
+    
     
     function handleChange(e){
         // destruct("take out") name and value attributes (their values essentially) from the input that e.target represents

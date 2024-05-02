@@ -36,6 +36,8 @@ function Login() {
                     id: res.data.id
                     
                 }))
+                window.sessionStorage.setItem("userID", res.data.id)
+                
                 navigate("/dashboard")
             }
             
