@@ -44,7 +44,9 @@ useEffect(()=>{
   console.log("displayAllStudents was called")
 },[])
 
-
+sd
+//This goes here because you updateStudent function will be in table and needs to communicate/impact
+//the update component when setUpdate is triggered
   const updateStudent = (student) => {
     // console.log("This is the first console:" , student)
     const {_id, studentID, email, name} = student;
@@ -84,7 +86,7 @@ useEffect(()=>{
       <h1 className={style.title}>Student Record</h1>
       <div className={style.allFormsContainer}>
         <Add displayAllStudents={displayAllStudents}/>
-        <Update students={students} updatedStudent={updatedStudent} setUpdatedStudent= {setUpdatedStudent} displayAllStudents={displayAllStudents}/> 
+        <Update updatedStudent={updatedStudent} setUpdatedStudent= {setUpdatedStudent} displayAllStudents={displayAllStudents}/> 
         <Table students={students} updateStudent={updateStudent} displayAllStudents={displayAllStudents}/>
       </div>
         
