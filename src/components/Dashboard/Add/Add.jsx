@@ -37,7 +37,7 @@ function Add({displayAllStudents}) {
             const {studentID, name, email} =  studentData
             try{
                 const response = await axios.post("http://localhost:2323/student-register/create-single-student", 
-                //Don't forget add userID that isn't from studentData but a state made when brought it user (person who logged in) and made a userID state from user.
+                //*****Don't forget add userID that isn't from studentData but a state made when brought it user (person who logged in) and made a userID state from user.
                 {studentID, name, email, userID})
                 console.log(response)
                 if (response.status === 200) {
