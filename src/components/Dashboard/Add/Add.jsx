@@ -4,6 +4,10 @@ import axios from "axios"
 import {AuthContext} from "../../../App.jsx"
 
 function Add({displayAllStudents}) {
+  
+  //user and userID needed because user's id needs to be placed in the data that you send to schema
+  //when add a new student. Need to get user from AuthContext in app.jsx then grab it's id that you put 
+  //in userID state
   const {user} = useContext(AuthContext)
 
   const [userID, setUserID] = useState(user.id)
