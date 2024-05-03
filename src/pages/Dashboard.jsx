@@ -7,7 +7,7 @@ import axios from "axios"
 import {AuthContext} from "../App.jsx"
 
 function Dashboard() {
-  const {user} = useContext(AuthContext)
+  const {user, setUser} = useContext(AuthContext)
   const [userID, setUserID] = useState(user.id)
   
   
@@ -61,23 +61,32 @@ useEffect(()=>{
   }
 
  
+// QQQQ I commented this out cos don't think it did anything
+  // useEffect(() => {
+  //   // console.log("This is the third console:" , updatedStudent)
+  // }, [updatedStudent])
 
-  useEffect(() => {
-    // console.log("This is the third console:" , updatedStudent)
-  }, [updatedStudent])
+
+  function logOut() {
+      window.localStorage.removeItem("userID")
+      setUser(prev => ({
+        ...prev,
+        id : ""
+      }))
+  }
 
 
     return (
     <div className={style.componentContainer}>
       <div className={style.logOutButtonContainer}>
-        <button className={style.logOutButton}>Log Out</button>
-      </div>
+        <button className={style.logOutButton} onClick={logOut}> Log Out </button>
+      </div>                                  
       <h1 className={style.title}>Student Record</h1>
       <div className={style.allFormsContainer}>
-      <Add displayAllStudents={displayAllStudents}/>
-      <Update students={students} updatedStudent={updatedStudent} setUpdatedStudent= {setUpdatedStudent} displayAllStudents={displayAllStudents}/> 
-      <Table students={students} updateStudent={updateStudent} displayAllStudents={displayAllStudents}/>
-    </div>
+        <Add displayAllStudents={displayAllStudents}/>
+        <Update students={students} updatedStudent={updatedStudent} setUpdatedStudent= {setUpdatedStudent} displayAllStudents={displayAllStudents}/> 
+        <Table students={students} updateStudent={updateStudent} displayAllStudents={displayAllStudents}/>
+      </div>
         
         
     </div>
