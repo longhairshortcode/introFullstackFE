@@ -60,7 +60,7 @@ function SignUp() {
             return;
         }
         try{
-            const res = await axios.post("http://localhost:2323/user/sign-up", {name, email, password} )
+            const res = await axios.post("https://student-register-bkend.onrender.com/user/sign-up", {name, email, password} )
             console.log(res)
             if (res.status === 201){
                 setUser(prev => ({

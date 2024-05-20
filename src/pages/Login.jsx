@@ -26,7 +26,7 @@ function Login() {
         e.preventDefault()
         const {email, password} = userLogin
         try{
-            const res = await axios.post("http://localhost:2323/user/login", {email, password});
+            const res = await axios.post("https://student-register-bkend.onrender.com/user/login", {email, password})
             // console.log(res)
             if (res.status === 200){
                 setUser(prev => ({
