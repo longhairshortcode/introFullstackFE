@@ -29,7 +29,7 @@ function Dashboard() {
 
   const displayAllStudents = async () => {
     try{
-      const response = await axios.get(`http://localhost:2323/student-register/get-all-students/${userID}`);
+      const response = await axios.get(`https://student-register-bkend.onrender.com/get-all-students/${userID}`);
       console.log("This is the 4th console: ", response)
       if (response.status === 200){
         setStudents(response.data)
