@@ -7,7 +7,7 @@ function Table({students, updateStudent, displayAllStudents}) {
 
   async function deleteStudent(id) {
         try{
-            const response = await axios.delete(`http://localhost:2323/student-register/delete-single-student/${id}`)
+            const response = await axios.delete(`https://student-register-bkend.onrender.com/student-register/delete-single-student/${id}`)
             console.log(response)
             if (response.status === 200) {
               displayAllStudents();

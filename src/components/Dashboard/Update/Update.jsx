@@ -16,7 +16,7 @@ async function handleSubmit(e) {
   e.preventDefault()
   const {_id, studentID, name, email} = updatedStudent
  try{ 
-  const response = await axios.put(`http://localhost:2323/student-register/update-single-student/${_id}`, {studentID, name, email} )
+  const response = await axios.put(`https://student-register-bkend.onrender.com/student-register/update-single-student/${_id}`, {studentID, name, email} )
   console.log(response)
   if (response.status === 200){
   displayAllStudents();
