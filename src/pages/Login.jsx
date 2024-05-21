@@ -3,6 +3,7 @@ import {useState, useContext} from "react"
 import { useNavigate } from "react-router-dom"
 import {AuthContext} from "../App.jsx"
 import axios from "axios"
+import {Link} from "react-router-dom"
 
 function Login() {
     const {setUser} = useContext(AuthContext)
@@ -72,8 +73,10 @@ function Login() {
                 onChange={handleChange}
                 placeholder="Password"
                 required/>
-                
-                <button className={style.button}>Log In</button>
+                <div className={style.buttonAndSignUpContainer}>
+                    <button className={style.button}>Log In</button>
+                    <p>Don't have an account? <Link className={style.signUp}to={"/sign-up"}>Sign-up</Link> </p>
+                </div>
             </form>
         </div>
     </div>
